@@ -5,6 +5,7 @@ $colorDefault: #fff;
 $bgColorHeader: #0b2e59;
 $bgColorSkills: #2a044a;
 $bgColorAboutMe: #0d6759;
+$colorPortfolio: #a0c55f;
 // percentages
 $widthFull: 100%;
 html{
@@ -125,4 +126,48 @@ header{
 		line-height: 2em;
 	}
 
+}
+
+.portfolio{
+	overflow: hidden;
+}
+
+.portfolio-example{
+	width: $widthFull;
+	height: auto;
+	position: relative;
+	margin-left: 10%;
+	margin: 60px 0 30px 10%;
+	text-align:left;
+}
+.portfolio-circle{
+	position: relative;
+	// left: 0;
+	border-radius: 50%;
+	height: 418px;
+	width: 418px;
+	border: 10px solid $colorPortfolio;
+	display: inline-block;
+	z-index: 2;
+}
+.portfolio-example-description{
+	background-color: $colorPortfolio;
+	display:inline-block;
+	position: absolute;
+	height: 350px;
+	width: 70%;
+	top: 50%;
+	left: 219px;
+	transform: translateY(-50%);
+	p{
+		position: absolute;
+		margin: 0;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		margin-left: 229px;
+		font-size: 5em;
+		width: 80%;
+	}
+	z-index: 1;
 }
