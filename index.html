@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class = "site">
-	<!-- nav -->
-	<nav>
-		<div class = "resume-btn">
-			Resume
+	<header id="mainHeader">
+		<div id="header-title" class="header-content">
+			<div class="wrapper">
+				<h1 id="header-name">Miguel Rico</h1>
+				<h2>Web Developer</h2>
+				<h3>Saratoga Springs, NY | 951-796-6545 | miguelricodev@gmail.com<h3>
+			</div>
 		</div>
-	</nav>
-	<!-- header -->
-	<header>
-		<div class="header-content">
-			<h1>Miguel Rico</h1>
-			<h2>Web Developer</h2>
-		</div>
-<!-- 		<div class = "portfolio">
-			<h2>Portfolio</h2>
-		</div> -->
 	</header>
 	<!-- about me -->
 	<div class="about-me">
-		<h1>About Me</h1>
-		<p>I'm a chill easy going guy that loves to code. Fell in love with web development when I saw what was possible with JavaScript. I've been learning and creating ever since.<br>Currently in Saratoga Springs, NY. Looking for freelance or in house opportunities.</p>
+		<div id="about-me-content">
+			<h1>About Me</h1>
+			<p>I'm a chill easy going guy that loves to code. Fell in love with web development when I saw what was possible with JavaScript. I've been learning and creating ever since.<br>Currently in Saratoga Springs, NY. Looking for freelance or in house opportunities.</p>
+		</div>
 	</div>
 	<!-- portfolio -->
 	<div class="portfolio">
@@ -144,6 +141,10 @@
 			</div>
 		</div> <!-- resume-content -->
 	</div> <!-- resume -->
-</div>	
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="js/mr-portfolio.js"></script>
 </body>
 </html>
