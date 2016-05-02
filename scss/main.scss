@@ -35,10 +35,12 @@ li{
 
 h1{
 	font-size: 4em;
+	// margin: 0;
 }
 
 h2{
 	font-size: 2.5em;
+	// margin:0;
 }
 
 h3{
@@ -72,41 +74,37 @@ header{
 }
 
 .header-content{
-	position: absolute;
+	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	// width: auto;
+	text-align: center;
 	.wrapper{
+		display: inline-block;
 		position: relative;
-		width: 100%;
-		text-align: right;
+		width: auto;
 		h1{
-			display: inline-block;
 			color: $colorHeader;
 			font-size: 15em;
 			margin: 0;
 			font-weight: normal;
+			// line-height: 0;
 		}
-
 		h2{
-			text-align: right;
 			position: absolute;
 			display: inline-block;
 			color: $colorDefault;
 			font-size: 5em;
-			top: 2.5em;
+			margin: 0;
+			bottom: 0;
 			right: 0;
-			// margin: 0 0 0 357px;
-			// text-indent: 30%;
 			font-weight: lighter;
-			line-height: 0;
+			line-height: 50%;
 		}
 		h3{
 			display: none;
 		}
 	}
-	
 }
 
 .hide{
@@ -124,6 +122,7 @@ header{
 	height: auto;
 	z-index: 4;
 	.wrapper{
+		position: relative;
 		h1{
 			color: $colorHeader;
 			font-size: 4em;
@@ -131,54 +130,132 @@ header{
 			display: inline-block;
 			font-weight: normal;
 			margin-left: 5%;
-			// background-color: black;
 		}
 		h2{
 			color: $colorDefault;
-			font-size: 3em;
+			font-size: 1.6em;
 			display: inline-block;
-			// margin: 0 0 0 357px;
-			// text-indent: 30%;
 			font-weight: lighter;
 			line-height: 0;
 		}
 		h3{
+			// // position: absolute;
+			// bottom: 0;
+			// right: 0;
 			font-size: 1.6em;
 			display: inline-block;
 			font-weight: lighter;
 			float: right;
+			// margin: 0;
 			margin-right: 5%;
 		}
 	}
 }
 
-.resume-btn{
-	text-align: right;
-	font-size: 5em;
-	color: $colorHeader;
-	margin-right: 5%;
+// NAV
+@media screen and (max-width: 874px){
+	.header-nav{
+		.wrapper{
+			h1{
+				margin-left: 2.5%;
+			}
+			h3{
+				margin-right: 2.5%;
+			}
+		}
+	}
+
+	#header-city{
+		display:none;
+	}
+}
+
+// NAV
+@media screen and (max-width: 786px){
+	.header-content{
+		.wrapper{
+			h1{
+				font-size: 10em;
+			}
+			h2{
+				font-size: 3.3em;
+			}
+		}
+	}
+}
+// NAV
+@media screen and (max-width: 638px){
+	.header-nav{
+		.wrapper{
+			text-align: center;
+			h1{
+				// display: block;
+				// margin-left: 2.5%;
+			}
+			h3{
+				display: block;
+				margin-top: 0;
+				margin-right: 2.5%;
+				float: none;
+			}
+		}
+	}
+
+	// #header-city{
+	// 	display:inline-block;
+	// }
+}
+@media screen and (max-width: 525px){
+	.header-content{
+		.wrapper{
+			h1{
+				font-size: 5em;
+			}
+			h2{
+				font-size: 1.7em;
+			}
+		}
+	}
 }
 // ==================================
 // ABOUT ME
 // ==================================
 .about-me{
+	background-color: $bgColorAboutMe;
+	overflow: none;
+	text-align: center;
+}
+.about-me-content{
 	display: flex;
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: $bgColorAboutMe;
+	margin: 0 10% 0 10%;
 	h1{
 		color: $colorHeader;
 		font-size: 10em;
+		margin: 30px 0 30px 0;
 	}
 	p{
 		font-weight: lighter;
 		font-size: 3em;
-		margin: 0 10% 20px 10%;
+		// margin: 0 10% 20px 10%;
 		line-height: 2em;
 	}
 
+}
+
+@media screen and (max-width: 718px){
+	.about-me-content{
+		margin: 0 5% 0 5%;
+		h1{
+			font-size: 5em;
+		}
+		p{
+			font-size: 2em;
+		}
+	}
 }
 // ==================================
 // PORTFOLIO

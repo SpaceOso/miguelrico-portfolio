@@ -40,30 +40,30 @@ header {
   height: 100vh; }
 
 .header-content {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  text-align: center; }
   .header-content .wrapper {
+    display: inline-block;
     position: relative;
-    width: 100%;
-    text-align: right; }
+    width: auto; }
     .header-content .wrapper h1 {
-      display: inline-block;
       color: #F38630;
       font-size: 15em;
       margin: 0;
       font-weight: normal; }
     .header-content .wrapper h2 {
-      text-align: right;
       position: absolute;
       display: inline-block;
       color: #fff;
       font-size: 5em;
-      top: 2.5em;
+      margin: 0;
+      bottom: 0;
       right: 0;
       font-weight: lighter;
-      line-height: 0; }
+      line-height: 50%; }
     .header-content .wrapper h3 {
       display: none; }
 
@@ -80,48 +80,82 @@ header {
   background-color: #25608F;
   height: auto;
   z-index: 4; }
+  .header-nav .wrapper {
+    position: relative; }
+    .header-nav .wrapper h1 {
+      color: #F38630;
+      font-size: 4em;
+      margin: 0;
+      display: inline-block;
+      font-weight: normal;
+      margin-left: 5%; }
+    .header-nav .wrapper h2 {
+      color: #fff;
+      font-size: 1.6em;
+      display: inline-block;
+      font-weight: lighter;
+      line-height: 0; }
+    .header-nav .wrapper h3 {
+      font-size: 1.6em;
+      display: inline-block;
+      font-weight: lighter;
+      float: right;
+      margin-right: 5%; }
+
+@media screen and (max-width: 874px) {
   .header-nav .wrapper h1 {
-    color: #F38630;
-    font-size: 4em;
-    margin: 0;
-    display: inline-block;
-    font-weight: normal;
-    margin-left: 5%; }
-  .header-nav .wrapper h2 {
-    color: #fff;
-    font-size: 3em;
-    display: inline-block;
-    font-weight: lighter;
-    line-height: 0; }
+    margin-left: 2.5%; }
   .header-nav .wrapper h3 {
-    font-size: 1.6em;
-    display: inline-block;
-    font-weight: lighter;
-    float: right;
-    margin-right: 5%; }
+    margin-right: 2.5%; }
 
-.resume-btn {
-  text-align: right;
-  font-size: 5em;
-  color: #F38630;
-  margin-right: 5%; }
-
+  #header-city {
+    display: none; } }
+@media screen and (max-width: 786px) {
+  .header-content .wrapper h1 {
+    font-size: 10em; }
+  .header-content .wrapper h2 {
+    font-size: 3.3em; } }
+@media screen and (max-width: 638px) {
+  .header-nav .wrapper {
+    text-align: center; }
+    .header-nav .wrapper h3 {
+      display: block;
+      margin-top: 0;
+      margin-right: 2.5%;
+      float: none; } }
+@media screen and (max-width: 525px) {
+  .header-content .wrapper h1 {
+    font-size: 5em; }
+  .header-content .wrapper h2 {
+    font-size: 1.7em; } }
 .about-me {
+  background-color: #99B2B7;
+  overflow: none;
+  text-align: center; }
+
+.about-me-content {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #99B2B7; }
-  .about-me h1 {
+  margin: 0 10% 0 10%; }
+  .about-me-content h1 {
     color: #F38630;
-    font-size: 10em; }
-  .about-me p {
+    font-size: 10em;
+    margin: 30px 0 30px 0; }
+  .about-me-content p {
     font-weight: lighter;
     font-size: 3em;
-    margin: 0 10% 20px 10%;
     line-height: 2em; }
 
+@media screen and (max-width: 718px) {
+  .about-me-content {
+    margin: 0 5% 0 5%; }
+    .about-me-content h1 {
+      font-size: 5em; }
+    .about-me-content p {
+      font-size: 2em; } }
 .portfolio {
   background-color: #fff;
   /* font-size: 5em; */
