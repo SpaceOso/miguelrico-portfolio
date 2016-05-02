@@ -120,7 +120,7 @@ header{
 	left: 0;
 	width: 100%;
 	text-align: left;
-	background-color: green;
+	background-color: #25608F;
 	height: auto;
 	z-index: 4;
 	.wrapper{
@@ -189,6 +189,7 @@ header{
 	text-align: center;
 	/* position: absolute; */
 	/* bottom: 0; */
+	height: auto;
 	width: 100%;
 	display: inline-block;
 }
@@ -201,18 +202,20 @@ header{
 	line-height: normal;
 }
 
-
-.portfolio{
-	overflow: hidden;
+.portfolio .wrapper{
+	// overflow: hidden;
+	height: 418px;
 }
 
 .portfolio-example{
 	width: $widthFull;
 	height: auto;
 	position: relative;
-	margin-left: 10%;
-	margin: 60px 0 30px 10%;
 	text-align:left;
+	margin: 60px 0 90px 5%;
+	// padding-left: 40px;
+	overflow: hidden;
+	// background-color: red;
 }
 .portfolio-circle{
 	position: relative;
@@ -223,30 +226,52 @@ header{
 	border: 10px solid #fff;
 	display: inline-block;
 	z-index: 2;
+	
 }
-.portfolio-example-description{
-	background-color: $bgColorPortfolioText;
-	display:inline-block;
+
+.slider{
+	overflow: hidden;
+	// background-color: orange;
 	position: absolute;
-	height: 350px;
-	width: 70%;
 	top: 50%;
 	left: 219px;
 	transform: translateY(-50%);
-	border-top-right-radius: 2em;
-	border-bottom-right-radius:2em;
-	p{
-		position: absolute;
-		margin: 0;
-		top: 50%;
-		left: 0;
-		transform: translateY(-50%);
-		margin-left: 229px;
-		font-size: 5em;
-		width: 80%;
-	}
-	z-index: 1;
 }
+
+// @keyframes example{
+// 	fromt{left: 0;}
+// 	to{left: 219px;}
+// }
+
+.portfolio-example-description{
+	
+	background-color: $bgColorPortfolioText;
+	// margin-left: 200px;
+	// position: relative;
+	height: 350px !important;
+	width: 1100px;
+	// top: 50%;
+	// left: 219px;
+	left: 0;
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+	border-top-left-radius: 2em;
+	border-bottom-left-radius: 2em;
+	// transform: translateY(-50%);
+	// animation-name: example;
+	// animation-duration: 4s;
+
+		p{
+			position: relative;
+			margin: 0;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			margin-left: 250px;
+			font-size: 5em;
+			width: 80%;
+		}
+	}
 // ==================================
 // RESUME
 // ==================================
@@ -273,14 +298,16 @@ header{
 	}
 }
 
+
 .resume-content{
 	text-align: left;
 	width: 70%;
-	margin: 30px 10% 0 10%;
+	margin: 30px 10% 40px 10%;
 
 	.wrapper{
 		overflow: hidden;
 	}
+
 	.languages, .software{
 		margin-right: 50px;
 		float: left;
