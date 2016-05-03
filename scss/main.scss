@@ -123,37 +123,47 @@ header{
 	z-index: 4;
 	.wrapper{
 		position: relative;
+		margin-bottom: 3px;
 		h1{
+			// position: relative;
 			color: $colorHeader;
 			font-size: 4em;
 			margin: 0;
 			display: inline-block;
 			font-weight: normal;
 			margin-left: 5%;
+			// float: left;
 		}
 		h2{
+			position: absolute;
+			// line-height: 0;
+			bottom: 0;
+			// right: 0;
 			color: $colorDefault;
 			font-size: 1.6em;
 			display: inline-block;
 			font-weight: lighter;
-			line-height: 0;
+			// line-height: 0;
+			// float: left;
+			margin:0;
 		}
 		h3{
-			// // position: absolute;
-			// bottom: 0;
-			// right: 0;
+			position: absolute;
+			// line-height: 0;
+			bottom: 0;
+			right: 0;
 			font-size: 1.6em;
 			display: inline-block;
 			font-weight: lighter;
-			float: right;
+			// float: right;
 			// margin: 0;
-			margin-right: 5%;
+			margin:0 5% 0 0;
 		}
 	}
 }
 
 // NAV
-@media screen and (max-width: 874px){
+@media screen and (max-width: 920px){
 	.header-nav{
 		.wrapper{
 			h1{
@@ -169,9 +179,59 @@ header{
 		display:none;
 	}
 }
-
 // NAV
-@media screen and (max-width: 786px){
+@media screen and (max-width: 708px){
+	.header-nav{
+		.wrapper{
+			// text-align: center;
+			h1{
+				// display: block;
+				font-size: 1.6em;
+				margin-left: 2.5%;
+			}
+			h2{
+
+				// position: static;
+				// float: left;
+			}
+			h3{
+				// position: static;
+				// display: block;
+				margin-top: 0;
+				margin-right: 2.5%;
+				// float: none;
+			}
+		}
+	}
+
+}
+// NAV
+@media screen and (max-width: 540px){
+	.header-nav{
+		.wrapper{
+			text-align: center;
+			h1{
+				// display: block;
+				// font-size: 1.6em;
+				margin-left: 2.5%;
+			}
+			h2{
+
+				position: static;
+				// float: left;
+			}
+			h3{
+				position: static;
+				display: block;
+				margin-top: 0;
+				margin-right: 2.5%;
+				// float: none;
+			}
+		}
+	}
+
+}
+@media screen and (max-width: 690px){
 	.header-content{
 		.wrapper{
 			h1{
@@ -183,28 +243,7 @@ header{
 		}
 	}
 }
-// NAV
-@media screen and (max-width: 638px){
-	.header-nav{
-		.wrapper{
-			text-align: center;
-			h1{
-				// display: block;
-				// margin-left: 2.5%;
-			}
-			h3{
-				display: block;
-				margin-top: 0;
-				margin-right: 2.5%;
-				float: none;
-			}
-		}
-	}
 
-	// #header-city{
-	// 	display:inline-block;
-	// }
-}
 @media screen and (max-width: 525px){
 	.header-content{
 		.wrapper{
@@ -224,6 +263,7 @@ header{
 	background-color: $bgColorAboutMe;
 	overflow: none;
 	text-align: center;
+	
 }
 .about-me-content{
 	display: flex;
@@ -285,11 +325,11 @@ header{
 }
 
 .portfolio-example{
-	width: $widthFull;
+	// width: $widthFull;
 	height: auto;
 	position: relative;
 	text-align:left;
-	margin: 60px 0 90px 5%;
+	margin: 60px 0 0 5%;
 	// padding-left: 40px;
 	overflow: hidden;
 	// background-color: red;
@@ -321,7 +361,6 @@ header{
 // }
 
 .portfolio-example-description{
-	
 	background-color: $bgColorPortfolioText;
 	// margin-left: 200px;
 	// position: relative;
@@ -334,21 +373,48 @@ header{
 	border-bottom-right-radius: 2em;
 	border-top-left-radius: 2em;
 	border-bottom-left-radius: 2em;
-	// transform: translateY(-50%);
-	// animation-name: example;
-	// animation-duration: 4s;
+	p{
+		position: relative;
+		margin: 0;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		margin-left: 250px;
+		font-size: 5em;
+		// width: 80%;
+	}
+}
 
-		p{
-			position: relative;
-			margin: 0;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			margin-left: 250px;
-			font-size: 5em;
-			width: 80%;
+@media screen and (max-width: 1404px){
+	.portfolio-example{
+		margin: 60px 0 0 10%;
+		overflow: hidden;
+		// background-color: red;
+	}
+	.slider{
+		left: 150px;
+		width: 90%;
+	}
+	.portfolio-circle{
+		height: 300px;
+		width: 300px;
+		img{
+			height: 300px;
+			width: 300px;
 		}
 	}
+
+	.portfolio-example-description{
+		height: 200px !important;
+		width: 90%;
+		margin-right: 30%;
+		p{
+			// width: 70%;
+			font-size: 3em;
+			margin: 0 0 0 190px ;
+		}
+	}
+}
 // ==================================
 // RESUME
 // ==================================

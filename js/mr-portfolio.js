@@ -1,5 +1,5 @@
 var distance = $("#header-title").offset().top;
-var aboutMeDistance = $(".about-me").offset().top;
+var aboutMeDistance = $(".about-me-content").offset().top;
 var portfolioHeight = null;
 var portfolioExamplesDistance = [];
 var $window = $(window);
@@ -28,7 +28,7 @@ var portfolioDescriptions = [
 $(document).ready(function(){
 	// console.log("in here 1");
 	portfolioHeight = $(".portfolio").height;
-	$("#about-me-content").hide();
+	$(".about-me-content").hide();
 
 	for(var i = 0; i < portfolioImages.length; i++ )
 	{
@@ -50,7 +50,7 @@ $window.scroll(function(){
 	if(!aboutMeVis){
 		if($window.scrollTop() >= aboutMeDistance - 200 ){
 			aboutMeVis = true;
-			$("#about-me-content").toggle('drop', {direction: 'down', easing: 'easeOutSine'}, 1500);
+			$(".about-me-content").toggle('drop', {direction: 'down', easing: 'easeOutSine'}, 1500);
 		}
 	}
 
