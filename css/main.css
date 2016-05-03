@@ -38,7 +38,6 @@ p {
 
 header {
   /* height: auto; */
-  position: relative;
   height: 100vh; }
 
 .header-content {
@@ -148,20 +147,19 @@ header {
     font-size: 1.7em; } }
 .about-me {
   background-color: #99B2B7;
-  overflow: none;
   text-align: center;
+  position: relative;
   height: 100vh; }
 
 .about-me-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 10% 0 10%; }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 30px 10% 0 10%; }
   .about-me-content h1 {
     color: #F38630;
     font-size: 10em;
-    margin: 30px 0 30px 0; }
+    display: block; }
   .about-me-content p {
     font-weight: lighter;
     font-size: 3em;
@@ -201,7 +199,7 @@ header {
   margin: 60px 0 0 0;
   overflow: hidden; }
 
-.portfolio-circle {
+.portfolio-circle img {
   position: relative;
   border-radius: 50%;
   height: 418px;
@@ -256,12 +254,9 @@ header {
         font-size: 3em;
         margin: 0 0 0 190px; }
 
-  .portfolio-circle {
+  .portfolio-circle img {
     height: 300px;
-    width: 300px; }
-    .portfolio-circle img {
-      height: 300px;
-      width: 300px; } }
+    width: 300px; } }
 @media screen and (max-width: 870px) {
   .portfolio-example {
     margin: 60px 0 0 10%;
@@ -279,13 +274,10 @@ header {
         font-size: 2em;
         margin: 0 0 0 100px; }
 
-  .portfolio-circle {
+  .portfolio-circle img {
     height: 150px;
     width: 150px;
-    border: 5px solid #fff; }
-    .portfolio-circle img {
-      height: 150px;
-      width: 150px; } }
+    border: 5px solid #fff; } }
 .resume {
   width: 100%; }
   .resume h1, .resume h2, .resume h3, .resume h4 {
