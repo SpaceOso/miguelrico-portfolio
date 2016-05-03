@@ -5,6 +5,9 @@ html {
   width: 100%;
   font-family: 'Lato', sans-serif; }
 
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   width: 100%;
   background-color: #009BA6;
@@ -31,8 +34,7 @@ p {
   margin: 0; }
 
 .site {
-  width: 100%;
-  text-align: center; }
+  width: 100%; }
 
 header {
   /* height: auto; */
@@ -85,7 +87,7 @@ header {
     margin-bottom: 3px; }
     .header-nav .wrapper h1 {
       color: #F38630;
-      font-size: 4em;
+      font-size: 1.6em;
       margin: 0;
       display: inline-block;
       font-weight: normal;
@@ -147,11 +149,11 @@ header {
 .about-me {
   background-color: #99B2B7;
   overflow: none;
-  text-align: center; }
+  text-align: center;
+  height: 100vh; }
 
 .about-me-content {
   display: flex;
-  height: 100vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -196,7 +198,7 @@ header {
   height: auto;
   position: relative;
   text-align: left;
-  margin: 60px 0 0 5%;
+  margin: 60px 0 0 0;
   overflow: hidden; }
 
 .portfolio-circle {
@@ -240,25 +242,52 @@ header {
 
   .slider {
     left: 150px;
-    width: 90%; }
+    width: 80%; }
+    .slider .portfolio-example-description {
+      height: 200px !important;
+      display: inline-block;
+      width: 100%;
+      margin-right: 70%;
+      border-top-right-radius: 1em;
+      border-bottom-right-radius: 1em;
+      border-top-left-radius: 1em;
+      border-bottom-left-radius: 1em; }
+      .slider .portfolio-example-description p {
+        font-size: 3em;
+        margin: 0 0 0 190px; }
 
   .portfolio-circle {
     height: 300px;
     width: 300px; }
     .portfolio-circle img {
       height: 300px;
-      width: 300px; }
+      width: 300px; } }
+@media screen and (max-width: 870px) {
+  .portfolio-example {
+    margin: 60px 0 0 10%;
+    overflow: hidden; }
 
-  .portfolio-example-description {
-    height: 200px !important;
-    width: 90%;
-    margin-right: 30%; }
-    .portfolio-example-description p {
-      font-size: 3em;
-      margin: 0 0 0 190px; } }
+  .slider {
+    left: 75px;
+    width: 80%; }
+    .slider .portfolio-example-description {
+      height: 100px !important;
+      display: inline-block;
+      width: 100%;
+      margin-right: 70%; }
+      .slider .portfolio-example-description p {
+        font-size: 2em;
+        margin: 0 0 0 100px; }
+
+  .portfolio-circle {
+    height: 150px;
+    width: 150px;
+    border: 5px solid #fff; }
+    .portfolio-circle img {
+      height: 150px;
+      width: 150px; } }
 .resume {
-  text-align: center;
-  overflow: auto; }
+  width: 100%; }
   .resume h1, .resume h2, .resume h3, .resume h4 {
     margin-bottom: 0; }
   .resume h4, .resume ul {
@@ -270,7 +299,6 @@ header {
 
 .resume-content {
   text-align: left;
-  width: 70%;
   margin: 30px 10% 40px 10%; }
   .resume-content .wrapper {
     overflow: hidden; }

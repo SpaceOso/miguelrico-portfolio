@@ -18,6 +18,9 @@ html{
 	font-family: 'Lato', sans-serif;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body{
 	width: $widthFull;
 	background-color: $bgColorDefault;
@@ -61,7 +64,7 @@ p{
 
 .site{
 	width: $widthFull;
-	text-align: center;
+	// text-align: center;
 }
 // ==================================
 // HEADER
@@ -127,7 +130,7 @@ header{
 		h1{
 			// position: relative;
 			color: $colorHeader;
-			font-size: 4em;
+			font-size: 1.6em;
 			margin: 0;
 			display: inline-block;
 			font-weight: normal;
@@ -263,11 +266,12 @@ header{
 	background-color: $bgColorAboutMe;
 	overflow: none;
 	text-align: center;
+	height: 100vh;
 	
 }
 .about-me-content{
 	display: flex;
-	height: 100vh;
+	
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -329,7 +333,7 @@ header{
 	height: auto;
 	position: relative;
 	text-align:left;
-	margin: 60px 0 0 5%;
+	margin: 60px 0 0 0;
 	// padding-left: 40px;
 	overflow: hidden;
 	// background-color: red;
@@ -343,12 +347,12 @@ header{
 	border: 10px solid #fff;
 	display: inline-block;
 	z-index: 2;
-	
 }
 
 .slider{
 	overflow: hidden;
 	// background-color: orange;
+
 	position: absolute;
 	top: 50%;
 	left: 219px;
@@ -393,7 +397,24 @@ header{
 	}
 	.slider{
 		left: 150px;
-		width: 90%;
+		// width: calc(100% - 200px);
+		width: 80%;
+		// background-color: red;
+		.portfolio-example-description{
+		height: 200px !important;
+		display: inline-block;
+		width: 100%;
+		margin-right: 70%;
+		border-top-right-radius: 1em;
+		border-bottom-right-radius: 1em;
+		border-top-left-radius: 1em;
+		border-bottom-left-radius: 1em;
+		p{
+			// width: 70%;
+			font-size: 3em;
+			margin: 0 0 0 190px ;
+		}
+	}
 	}
 	.portfolio-circle{
 		height: 300px;
@@ -403,15 +424,38 @@ header{
 			width: 300px;
 		}
 	}
+}
 
-	.portfolio-example-description{
-		height: 200px !important;
-		width: 90%;
-		margin-right: 30%;
+@media screen and (max-width: 870px){
+	.portfolio-example{
+		margin: 60px 0 0 10%;
+		overflow: hidden;
+		// background-color: red;
+	}
+	.slider{
+		left: 75px;
+		// width: calc(100% - 200px);
+		width: 80%;
+		// background-color: red;
+		.portfolio-example-description{
+		height: 100px !important;
+		display: inline-block;
+		width: 100%;
+		margin-right: 70%;
 		p{
 			// width: 70%;
-			font-size: 3em;
-			margin: 0 0 0 190px ;
+			font-size: 2em;
+			margin: 0 0 0 100px ;
+		}
+	}
+	}
+	.portfolio-circle{
+		height: 150px;
+		width: 150px;
+		border: 5px solid #fff;
+		img{
+			height: 150px;
+			width: 150px;
 		}
 	}
 }
@@ -420,9 +464,10 @@ header{
 // ==================================
 
 .resume{
-	text-align: center;
+	// text-align: center;
 	// background-color: $bgColorHeader;
-	overflow: auto;
+	// overflow: auto;
+	width: 100%;
 
 	h1, h2, h3, h4{
 		margin-bottom: 0;
@@ -444,7 +489,7 @@ header{
 
 .resume-content{
 	text-align: left;
-	width: 70%;
+	// width: 100%;
 	margin: 30px 10% 40px 10%;
 
 	.wrapper{

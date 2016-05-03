@@ -1,6 +1,7 @@
 var distance = $("#header-title").offset().top;
 var aboutMeDistance = $(".about-me-content").offset().top;
 var portfolioHeight = null;
+var aboutMeHeight = null;
 var portfolioExamplesDistance = [];
 var $window = $(window);
 var didScroll = false;
@@ -28,6 +29,8 @@ var portfolioDescriptions = [
 $(document).ready(function(){
 	// console.log("in here 1");
 	portfolioHeight = $(".portfolio").height;
+	aboutMeHeight = $(".about-me-content").height;
+	$('.about-me-content').css({'height': aboutMeHeight});
 	$(".about-me-content").hide();
 
 	for(var i = 0; i < portfolioImages.length; i++ )
