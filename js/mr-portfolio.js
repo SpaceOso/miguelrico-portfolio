@@ -1,5 +1,5 @@
-var distance = $("#header-title").offset().top;
-var aboutMeDistance = $(".about-me-content").offset().top;
+var distance = null;
+var aboutMeDistance = null;
 var portfolioHeight = null;
 var aboutMeHeight = null;
 var portfolioExamplesDistance = [];
@@ -27,12 +27,14 @@ var portfolioDescriptions = [
 ];
 
 $(document).ready(function(){
-	// console.log("in here 1");
-	portfolioHeight = $(".portfolio").height;
+	distance = $("#header-title").offset().top;
+	aboutMeDistance = $(".about-me-content").offset().top;
+	portfolioHeight = $(".portfolio").css('height');
 	aboutMeHeight = $(".about-me-content").height;
 	$('.about-me').css({'height': aboutMeHeight});
 	$(".about-me-content").hide();
 
+	
 	for(var i = 0; i < portfolioImages.length; i++ )
 	{
 		portfolioExamplesDistance.push( $( portfolioImages[i] ).offset().top );
@@ -44,8 +46,7 @@ $(document).ready(function(){
 		$( portfolioDescriptions[ i ] ).hide();
 	}
 
-	$('.portfolio').css({'height': portfolioHeight});
-
+	$('.portfolio').css('height', portfolioHeight);
 });
 
 $window.scroll(function(){
@@ -59,10 +60,9 @@ $window.scroll(function(){
 
 	if( $(portfolioImages[ 0 ] ).is(':hidden') )
 	{
-		if($window.scrollTop() >= portfolioExamplesDistance[ 0 ] - 600 )
+		if($window.scrollTop() >= portfolioExamplesDistance[ 0 ] - 200 )
 		{
 			$( portfolioImages[ 0 ] ).effect('fade', 1500, revealDescriptions);
-			// $( portfolioImages[ 0 ] ).effect('fade', 1500);
 			portfolioImages.splice(0, 1);
 			portfolioExamplesDistance.splice(0,1);
 		}
@@ -114,13 +114,6 @@ $(document).on("click", revealDescriptions);
 
 function revealDescriptions(){
 	console.log('in here now');
-	$( portfolioDescriptions[ 0 ] ).effect('slide', {direction: 'left', mode: 'show'}, 500);
-	// $( "#port-description-01").animate({left: '219px', display: "visible !important"}, 400);
-	// $( "#port-description-01" ).slideToggle("slow");
+	$( portfolioDescriptions[ 0 ] ).effect('fade', {direction: 'up', mode: 'show'}, 500);
 	portfolioDescriptions.splice(0,1);
-}
-
-
-function removePortfolioImage(){
-
 }
