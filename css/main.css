@@ -1,17 +1,21 @@
 html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
-  font-family: 'Lato', sans-serif; }
+  width: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
 body {
-  width: 100%;
-  background-color: #000b17;
+  background-color: #fff;
   font-size: 62.5%;
   /* font-size 1em = 10px on default browser settings */
-  color: #fff; }
+  color: #fff;
+  font-family: 'Roboto', sans-serif; }
+
+ul {
+  padding: 0; }
 
 h1 {
   font-size: 4em; }
@@ -28,9 +32,6 @@ h4 {
 li {
   font-size: 1.6em; }
 
-p {
-  margin: 0; }
-
 .site {
   width: 100%; }
 
@@ -39,22 +40,21 @@ header {
   background-image: url("../images/hero-top.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size: fixed;
   height: 100vh; }
 
 .header-content {
   position: relative;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center; }
   .header-content .wrapper {
     display: inline-block;
     position: relative;
     width: auto; }
     .header-content .wrapper h1 {
-      color: #B24C38;
+      color: #5b3921;
       font-size: 15em;
       margin: 0;
       font-weight: normal; }
@@ -81,14 +81,14 @@ header {
   left: 0;
   width: 100%;
   text-align: left;
-  background-color: #24A8AD;
+  background-color: #23201a;
   height: auto;
   z-index: 4; }
   .header-nav .wrapper {
     position: relative;
     margin-bottom: 3px; }
     .header-nav .wrapper h1 {
-      color: #B24C38;
+      color: #5b3921;
       font-size: 1.6em;
       margin: 0;
       display: inline-block;
@@ -152,7 +152,7 @@ header {
   .header-content .wrapper h2 {
     font-size: 1.7em; } }
 .about-me {
-  background-color: #000b17;
+  background: linear-gradient(#BEBEBE, #b2bebd);
   text-align: center;
   position: relative;
   height: 100vh;
@@ -161,19 +161,20 @@ header {
 .about-me-wrapper {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  transform: translateY(-50%); }
   .about-me-wrapper .about-me-content {
-    margin: 0 10% 0 10%; }
+    margin: 0 10% 0 10%;
+    padding-bottom: 100px; }
     .about-me-wrapper .about-me-content h1 {
-      color: #24A8AD;
+      color: #5b3921;
       font-size: 10em;
       display: block;
-      margin: 0; }
+      margin: 0;
+      font-weight: lighter; }
     .about-me-wrapper .about-me-content p {
       font-weight: lighter;
       font-size: 3em;
-      line-height: 2em; }
+      line-height: 1.5em; }
 
 @media screen and (max-width: 718px) {
   .about-me-wrapper .about-me-content {
@@ -184,188 +185,108 @@ header {
     .about-me-wrapper .about-me-content p {
       font-size: 2em; } }
 .portfolio {
-  /* font-size: 5em; */
   text-align: center;
-  /* position: absolute; */
-  /* bottom: 0; */
-  width: 100%;
+  background: linear-gradient(#b2bebd, #9EA8A7);
+  padding: 0 2%;
+  margin: 0;
   overflow: hidden; }
+  .portfolio h1 {
+    font-size: 10em;
+    font-weight: lighter;
+    color: #5b3921; }
 
-.portfolio h2 {
-  color: #0d6759;
-  margin-bottom: 0;
-  font-size: 3em;
-  text-indent: 0;
-  line-height: normal; }
-
-.portfolio .wrapper {
-  height: 418px; }
+.portfolio-content {
+  max-width: 120em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px; }
 
 .portfolio-example {
-  height: auto;
-  position: relative;
-  text-align: left;
-  margin: 60px 0 0 0;
-  overflow: hidden; }
-
-.portfolio-circle {
-  position: relative;
-  border-radius: 50%;
-  height: 418px;
-  width: 418px;
-  border: 10px solid #000b17;
   display: inline-block;
-  overflow: hidden;
-  z-index: 2; }
-
-.slider {
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 219px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
-
-.portfolio-example-description {
-  background-color: #6BA8AD;
-  height: 350px !important;
-  width: 1100px;
-  left: 0;
-  border-top-right-radius: 2em;
-  border-bottom-right-radius: 2em;
-  border-top-left-radius: 2em;
-  border-bottom-left-radius: 2em; }
-  .portfolio-example-description p {
-    position: relative;
-    margin: 0;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    margin-left: 250px;
-    font-size: 5em; }
-
-@media screen and (max-width: 1404px) {
-  .portfolio-example {
-    margin: 60px 0 0 10%;
-    overflow: hidden; }
-
-  .slider {
-    left: 150px;
-    width: 80%; }
-    .slider .portfolio-example-description {
-      height: 200px !important;
-      display: inline-block;
-      width: 100%;
-      margin-right: 70%;
-      border-top-right-radius: 1em;
-      border-bottom-right-radius: 1em;
-      border-top-left-radius: 1em;
-      border-bottom-left-radius: 1em; }
-      .slider .portfolio-example-description p {
-        font-size: 3em;
-        margin: 0 0 0 190px; }
-
-  .portfolio-circle {
-    height: 300px;
-    width: 300px; }
-    .portfolio-circle img {
-      height: 100%;
-      width: max-width; } }
-@media screen and (max-width: 870px) {
-  .portfolio-example {
-    margin: 60px 0 0 10%;
-    overflow: hidden; }
-
-  .slider {
-    left: 75px;
-    width: 80%; }
-    .slider .portfolio-example-description {
-      height: 100px !important;
-      display: inline-block;
-      width: 100%;
-      margin-right: 70%; }
-      .slider .portfolio-example-description p {
-        font-size: 2em;
-        margin: 0 0 0 100px; }
-
-  .portfolio-circle {
-    height: 150px;
-    width: 150px;
-    border: 5px solid #fff; }
-    .portfolio-circle img {
-      height: 100%;
-      width: max-width; } }
-@media screen and (max-width: 425px) {
-  .portfolio {
-    text-align: center; }
-
-  .portfolio-example {
-    margin: 0;
-    text-align: center; }
-
-  .slider {
-    position: static;
-    padding: 0;
-    width: auto;
-    left: auto;
-    top: auto;
-    -webkit-transform: none;
-            transform: none; }
-    .slider .portfolio-example-description {
-      height: 100px !important;
-      display: inline-block;
-      padding: 0;
-      margin: 0;
-      border-radius: 0; }
-      .slider .portfolio-example-description p {
-        font-size: 2em;
-        margin: 0; }
-
-  .portfolio-circle {
-    position: relative;
-    width: calc(100% - 10px);
-    height: 150px;
-    display: block;
-    text-align: center;
-    border-radius: 0;
-    overflow: hidden;
-    margin: 0 auto;
-    border: 0;
-    background-color: red; }
-    .portfolio-circle img {
-      height: auto;
-      width: 100%;
-      position: relative;
-      line-height: 0; } }
-.resume {
-  width: 100%; }
-  .resume h1, .resume h2, .resume h3, .resume h4 {
-    margin-bottom: 0; }
-  .resume h4, .resume ul {
-    margin-top: 0; }
-  .resume h4, .resume p, .resume li {
-    font-weight: lighter; }
-  .resume p {
-    font-size: 1.6em; }
-
-.resume-content {
+  vertical-align: top;
+  margin: 0 3% 0 0;
   text-align: left;
-  margin: 30px 10% 40px 10%; }
-  .resume-content .wrapper {
-    overflow: hidden; }
-  .resume-content .languages, .resume-content .software {
-    margin-right: 50px;
-    float: left;
-    display: inline-block; }
-  .resume-content .education h3 {
-    margin-top: 0;
-    font-weight: lighter; }
+  width: 30%; }
+  .portfolio-example .portfolio-desc-title {
+    font-weight: bold;
+    color: #5b3921; }
+  .portfolio-example p {
+    font-weight: lighter;
+    font-size: 1.4em; }
+  .portfolio-example img {
+    width: 100%;
+    box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
+    margin-bottom: 2em; }
 
-footer {
-  /* height: auto; */
-  background-image: url("../images/hero-bottom.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-  height: 100vh; }
+.resume {
+  background-color: #9EA8A7;
+  background: linear-gradient(#9EA8A7, #fff);
+  overflow: auto; }
+  .resume h1 {
+    font-size: 10em;
+    font-weight: lighter;
+    color: #5b3921;
+    text-align: center; }
+  .resume h2, .resume h3, .resume h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #545959;
+    margin-bottom: 0;
+    font-weight: 500; }
+  .resume h2 {
+    margin-top: 0; }
+  .resume h4, .resume ul {
+    margin-top: 0;
+    color: #545959; }
+  .resume h4 {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-weight: 300;
+    color: #545959; }
+  .resume p, .resume li {
+    font-size: 1.4em;
+    line-height: 1.6em;
+    font-weight: 300;
+    color: #545959; }
+  .resume li {
+    position: relative;
+    margin: 15px 2% 0 0;
+    list-style-type: none;
+    display: inline-block;
+    background-color: #ddd; }
+  .resume .resume-content {
+    text-align: left;
+    margin: 0 10% 40px 10%;
+    display: inline-block;
+    vertical-align: top; }
+    .resume .resume-content h2 {
+      position: relative;
+      margin: 30px 0 0 2%; }
+    .resume .resume-content .resume-post {
+      display: inline-block;
+      text-align: left;
+      width: 45%;
+      margin: 0 2%;
+      vertical-align: top; }
+      .resume .resume-content .resume-post p {
+        margin: 0; }
+    .resume .resume-content .skills {
+      vertical-align: top;
+      text-align: center;
+      margin: 3em auto 0 2%;
+      text-align: left; }
+      .resume .resume-content .skills h2 {
+        text-align: left; }
+    .resume .resume-content .languages, .resume .resume-content .software {
+      margin-right: 50px;
+      text-align: left;
+      vertical-align: top; }
+    .resume .resume-content .resume-profile {
+      text-align: center;
+      width: 70%;
+      margin: 0 auto; }
+    .resume .resume-content .education {
+      margin: 3em auto 0 2%; }
+      .resume .resume-content .education p {
+        margin: 0; }
