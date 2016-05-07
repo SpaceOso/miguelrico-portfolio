@@ -1,52 +1,21 @@
 var distance = null;
 var aboutMeDistance = null;
-var portfolioHeight = null;
 var aboutMeHeight = null;
-var portfolioExamplesDistance = [];
 var $window = $(window);
 var didScroll = false;
-var minimalHeader = false;
-var headerTimer = null;
 var aboutMeVis = false;
-var portfolioExamples = [
-	"#portfolio-example-01",
-	"#portfolio-example-02",
-	"#portfolio-example-03"
-];
 
-var portfolioImages = [
-	"#port-image-01",
-	"#port-image-02",
-	"#port-image-03"
-];
-
-var portfolioDescriptions = [
-	"#port-description-01",
-	"#port-description-02",
-	"#port-description-03"
-];
 
 $(document).ready(function(){
-	distance = $("#header-title").offset().top;
-	aboutMeDistance = $(".about-me-content").offset().top;
-	portfolioHeight = $(".portfolio").css('height');
+	// distance = $("#header-title").offset().top;
+	aboutMeDistance = $(".about-me").offset().top;
 	aboutMeHeight = $(".about-me-content").height;
 	$('.about-me').css({'height': aboutMeHeight});
 	$(".about-me-content").hide();
 
+	$('#header-title').effect('fade', 'swing', 2000);
+
 	
-	for(var i = 0; i < portfolioImages.length; i++ )
-	{
-		portfolioExamplesDistance.push( $( portfolioImages[i] ).offset().top );
-	}
-
-	for(var i = 0; i < portfolioImages.length; i++)
-	{
-		$( portfolioImages[ i ] ).hide();
-		$( portfolioDescriptions[ i ] ).hide();
-	}
-
-	$('.portfolio').css('height', portfolioHeight);
 });
 
 $window.scroll(function(){
@@ -58,62 +27,8 @@ $window.scroll(function(){
 		}
 	}
 
-	if( $(portfolioImages[ 0 ] ).is(':hidden') )
-	{
-		if($window.scrollTop() >= portfolioExamplesDistance[ 0 ] - 200 )
-		{
-			$( portfolioImages[ 0 ] ).effect('fade', 1500, revealDescriptions);
-			portfolioImages.splice(0, 1);
-			portfolioExamplesDistance.splice(0,1);
-		}
-	}
 });
 
-function hideContent(){
-	if(!minimalHeader)
-		{
-			$("#header-title").effect("fade", "swing", 500, changeHeader);
-		}else if(minimalHeader){
-			$("#header-title").effect("fade", "swing", 500, changeHeaderBack);
-		}
-}
 
-function showContent(){
-	$("#header-title").show("fade", 1000);
-	headerTimer = setInterval(checkForScroll, 250);
-}
 
-function changeHeader(){
-	$("#header-title").switchClass('header-content', 'header-nav', 250, "linear", showContent);
-}
 
-function changeHeaderBack(){
-	$("#header-title").switchClass('header-nav', 'header-content', 250, 'linear', showContent);
-}
-
-function checkForScroll(){
-	if(didScroll){
-		didScroll = false;
-		if(!minimalHeader && $window.scrollTop() >= distance + 100)
-		{
-			clearInterval(headerTimer);
-			hideContent();
-			minimalHeader = true;
-		}else if( minimalHeader && $window.scrollTop() <= distance - 50)
-		{
-			clearInterval(headerTimer);
-			hideContent();
-			minimalHeader = false;
-		}
-	}
-}
-
-headerTimer = setInterval(checkForScroll,250);
-
-$(document).on("click", revealDescriptions);
-
-function revealDescriptions(){
-	console.log('in here now');
-	$( portfolioDescriptions[ 0 ] ).effect('fade', {direction: 'up', mode: 'show'}, 500);
-	portfolioDescriptions.splice(0,1);
-}

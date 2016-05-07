@@ -8,10 +8,10 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #fff;
+  background-color: #545959;
   font-size: 62.5%;
   /* font-size 1em = 10px on default browser settings */
-  color: #fff;
+  color: #545959;
   font-family: 'Roboto', sans-serif; }
 
 ul {
@@ -32,16 +32,23 @@ h4 {
 li {
   font-size: 1.6em; }
 
+a {
+  text-decoration: none;
+  color: #fff; }
+
+a:visited, a:hover, a:focus {
+  color: #fff; }
+
 .site {
   width: 100%; }
 
 header {
-  /* height: auto; */
   background-image: url("../images/hero-top.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: fixed;
-  height: 100vh; }
+  background-size: cover;
+  height: 100vh;
+  border-bottom: 10px solid #5b3921; }
 
 .header-content {
   position: relative;
@@ -57,11 +64,11 @@ header {
       color: #5b3921;
       font-size: 15em;
       margin: 0;
-      font-weight: normal; }
+      font-weight: 300; }
     .header-content .wrapper h2 {
       position: absolute;
       display: inline-block;
-      color: #fff;
+      color: #545959;
       font-size: 5em;
       margin: 0;
       bottom: 0;
@@ -71,73 +78,32 @@ header {
     .header-content .wrapper h3 {
       display: none; }
 
-.hide {
+#header-title {
   display: none; }
 
-.header-nav {
-  display: block;
+nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: left;
   background-color: #23201a;
-  height: auto;
-  z-index: 4; }
-  .header-nav .wrapper {
-    position: relative;
-    margin-bottom: 3px; }
-    .header-nav .wrapper h1 {
-      color: #5b3921;
-      font-size: 1.6em;
-      margin: 0;
-      display: inline-block;
-      font-weight: normal;
-      margin-left: 5%; }
-    .header-nav .wrapper h2 {
-      position: absolute;
-      bottom: 0;
-      color: #fff;
-      font-size: 1.6em;
-      display: inline-block;
-      font-weight: lighter;
-      margin: 0; }
-    .header-nav .wrapper h3 {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      font-size: 1.6em;
-      display: inline-block;
-      font-weight: lighter;
-      margin: 0 5% 0 0; }
+  text-align: center;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  overflow: hidden; }
+  nav ul {
+    margin: 0; }
+  nav ul li {
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    color: #fff;
+    border-right: 1px solid #5b3921; }
+  nav ul li a {
+    display: inline-block;
+    height: 100%;
+    line-height: 30px;
+    margin: auto 10px; }
 
-@media screen and (max-width: 920px) {
-  .header-nav .wrapper h1 {
-    margin-left: 2.5%; }
-  .header-nav .wrapper h3 {
-    margin-right: 2.5%; }
-
-  #header-city {
-    display: none; } }
-@media screen and (max-width: 708px) {
-  .header-nav .wrapper h1 {
-    font-size: 1.6em;
-    margin-left: 2.5%; }
-  .header-nav .wrapper h3 {
-    margin-top: 0;
-    margin-right: 2.5%; } }
-@media screen and (max-width: 540px) {
-  .header-nav .wrapper {
-    text-align: center; }
-    .header-nav .wrapper h1 {
-      margin-left: 2.5%; }
-    .header-nav .wrapper h2 {
-      position: static; }
-    .header-nav .wrapper h3 {
-      position: static;
-      display: block;
-      margin-top: 0;
-      margin-right: 2.5%; } }
 @media screen and (max-width: 796px) {
   .header-content .wrapper h1 {
     font-size: 10em; }
@@ -152,10 +118,16 @@ header {
   .header-content .wrapper h2 {
     font-size: 1.7em; } }
 .about-me {
+  background: -webkit-linear-gradient(#BEBEBE, #b2bebd);
+  background: -o-linear-gradient(#BEBEBE, #b2bebd);
+  background: -moz-linear-gradient(#BEBEBE, #b2bebd);
   background: linear-gradient(#BEBEBE, #b2bebd);
   text-align: center;
   position: relative;
+  vertical-align: top;
   height: 100vh;
+  margin: -1px 0 0 0;
+  padding: 1px 0 0 0;
   overflow: hidden; }
 
 .about-me-wrapper {
@@ -164,31 +136,41 @@ header {
   transform: translateY(-50%); }
   .about-me-wrapper .about-me-content {
     margin: 0 10% 0 10%;
-    padding-bottom: 100px; }
+    padding: 30px 0 100px 0; }
     .about-me-wrapper .about-me-content h1 {
       color: #5b3921;
-      font-size: 10em;
+      font-size: 15vh;
       display: block;
-      margin: 0;
       font-weight: lighter; }
     .about-me-wrapper .about-me-content p {
       font-weight: lighter;
-      font-size: 3em;
+      font-size: 5vh;
       line-height: 1.5em; }
 
-@media screen and (max-width: 718px) {
+@media screen and (max-width: 910px) {
   .about-me-wrapper .about-me-content {
     margin: 0 5% 0 5%; }
     .about-me-wrapper .about-me-content h1 {
-      font-size: 5em;
+      font-size: 10vh;
+      margin: 0; }
+    .about-me-wrapper .about-me-content p {
+      font-size: 4vh; } }
+@media screen and (max-width: 380px) {
+  .about-me-wrapper .about-me-content {
+    margin: 0 5% 0 5%; }
+    .about-me-wrapper .about-me-content h1 {
+      font-size: 8vh;
       margin: 0; }
     .about-me-wrapper .about-me-content p {
       font-size: 2em; } }
 .portfolio {
   text-align: center;
-  background: linear-gradient(#b2bebd, #9EA8A7);
-  padding: 0 2%;
-  margin: 0;
+  background: -webkit-linear-gradient(#b2bebd, #9EA8A7);
+  background: -o-linear-gradient(#b2bebd, #9EA8A7);
+  background: -moz-linear-gradient(#b2bebd, #9EA8A7);
+  background: linear-gradient(#b2bebd, #AAB5B4);
+  margin: -1px 0 0 0;
+  padding: 1px 0 0 2%;
   overflow: hidden; }
   .portfolio h1 {
     font-size: 10em;
@@ -211,19 +193,36 @@ header {
     font-weight: bold;
     color: #5b3921; }
   .portfolio-example p {
-    font-weight: lighter;
     font-size: 1.4em; }
   .portfolio-example img {
     width: 100%;
+    height: 90%;
     box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
     -moz-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
     -webkit-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
     margin-bottom: 2em; }
 
+@media screen and (max-width: 812px) {
+  .portfolio h1 {
+    font-size: 5em; }
+
+  .portfolio-example {
+    text-align: center;
+    display: block;
+    width: auto; }
+    .portfolio-example img {
+      max-width: 100%;
+      width: 100%; } }
 .resume {
   background-color: #9EA8A7;
-  background: linear-gradient(#9EA8A7, #fff);
-  overflow: auto; }
+  background: -webkit-linear-gradient(#9EA8A7, #fff);
+  background: -o-linear-gradient(#9EA8A7, #fff);
+  background: -moz-linear-gradient(#9EA8A7, #fff);
+  background: linear-gradient(#AAB5B4, #fff);
+  overflow: auto;
+  margin: -1px 0 0 0;
+  padding: 1px 0 0 2%;
+  overflow-x: hidden; }
   .resume h1 {
     font-size: 10em;
     font-weight: lighter;
@@ -252,6 +251,7 @@ header {
   .resume li {
     position: relative;
     margin: 15px 2% 0 0;
+    padding: 0 2px;
     list-style-type: none;
     display: inline-block;
     background-color: #ddd; }
@@ -277,7 +277,8 @@ header {
       margin: 3em auto 0 2%;
       text-align: left; }
       .resume .resume-content .skills h2 {
-        text-align: left; }
+        text-align: left;
+        margin-left: 0; }
     .resume .resume-content .languages, .resume .resume-content .software {
       margin-right: 50px;
       text-align: left;
@@ -290,3 +291,64 @@ header {
       margin: 3em auto 0 2%; }
       .resume .resume-content .education p {
         margin: 0; }
+
+@media screen and (max-width: 812px) {
+  .resume {
+    padding: 1px 0 0 0; }
+    .resume h1 {
+      font-size: 5em; }
+    .resume h2 {
+      text-align: center; }
+    .resume .resume-content {
+      margin: 0 3% 40px 3%;
+      text-align: center; }
+      .resume .resume-content .resume-profile {
+        width: 90%;
+        margin: 0 3%; }
+      .resume .resume-content .resume-post {
+        display: block;
+        text-align: center;
+        width: 95%;
+        margin: 0 auto; } }
+footer {
+  background-color: #363636;
+  border-top: 10px solid #5b3921;
+  overflow: hidden;
+  color: #949494; }
+  footer .contact {
+    float: left;
+    vertical-align: top;
+    margin: 30px 2% 0 2%; }
+    footer .contact p {
+      font-weight: lighter;
+      font-size: 1.8em; }
+  footer .social {
+    vertical-align: top;
+    float: right;
+    margin: 30px 2% 0 0; }
+    footer .social img {
+      width: 50px;
+      height: 50px; }
+
+@media screen and (max-width: 570px) {
+  footer .contact {
+    text-align: center;
+    display: block;
+    float: none;
+    vertical-align: top;
+    margin: 30px 2% 0 2%; }
+    footer .contact p {
+      font-weight: lighter;
+      font-size: 1.8em; }
+  footer .social {
+    vertical-align: top;
+    display: block;
+    float: none;
+    margin: 30px 0 30px 0;
+    text-align: center; }
+    footer .social img {
+      text-align: center;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      margin: 0 2em; } }
