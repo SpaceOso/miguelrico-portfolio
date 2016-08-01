@@ -39,6 +39,11 @@ a {
 a:visited, a:hover, a:focus {
   color: #fff; }
 
+.resume-post a {
+  color: #6BA8AD; }
+  .resume-post a .resume-post a:visited {
+    color: #6BA8AD; }
+
 .site {
   width: 100%; }
 
@@ -48,35 +53,63 @@ header {
   background-position: center top;
   background-size: cover;
   height: 100vh;
-  border-bottom: 10px solid #5b3921; }
+  border-bottom: 10px solid #5b3921;
+  position: relative; }
+  header .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #0c4960;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    opacity: .7; }
 
 .header-content {
   position: relative;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+  z-index: 3; }
   .header-content .wrapper {
     display: inline-block;
     position: relative;
     width: auto; }
     .header-content .wrapper h1 {
-      color: #5b3921;
+      color: #FF9200;
       font-size: 15em;
       margin: 0;
       font-weight: 300; }
     .header-content .wrapper h2 {
       position: absolute;
       display: inline-block;
-      color: #545959;
+      color: #fff;
       font-size: 5em;
       margin: 0;
       bottom: 0;
       right: 0;
-      font-weight: lighter;
+      font-weight: normal;
       line-height: 50%; }
     .header-content .wrapper h3 {
       display: none; }
+  .header-content #header-skills {
+    height: auto;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+    -moz-transform: translatex(-50%);
+    -ms-transform: translatex(-50%);
+    -o-transform: translatex(-50%);
+    transform: translatex(-50%);
+    width: 100%; }
+  .header-content #header-skills li {
+    display: inline-block;
+    margin: 40px;
+    padding: 15px;
+    font-size: 3em;
+    color: #fff;
+    border-bottom: 2px solid #b2bebd; }
 
 #header-title {
   display: none; }
@@ -104,11 +137,21 @@ nav {
     line-height: 30px;
     margin: auto 10px; }
 
+@media screen and (max-width: 950px) {
+  .header-content #header-skills li {
+    margin: 20px;
+    font-size: 2em;
+    padding: 3%; } }
 @media screen and (max-width: 796px) {
   .header-content .wrapper h1 {
     font-size: 10em; }
   .header-content .wrapper h2 {
-    font-size: 3.3em; } }
+    font-size: 3.3em; }
+  .header-content #header-skills li {
+    margin: 15px;
+    font-size: 1.6em;
+    padding: 3%;
+    padding-bottom: 10px; } }
 @media screen and (max-width: 525px) {
   header {
     background-size: auto 100%; }
@@ -116,7 +159,12 @@ nav {
   .header-content .wrapper h1 {
     font-size: 5em; }
   .header-content .wrapper h2 {
-    font-size: 1.7em; } }
+    font-size: 1.7em; }
+  .header-content #header-skills li {
+    margin: 10px;
+    font-size: 1.4em;
+    padding: 1%;
+    padding-bottom: 10px; } }
 .about-me {
   background: -webkit-linear-gradient(#BEBEBE, #b2bebd);
   background: -o-linear-gradient(#BEBEBE, #b2bebd);
@@ -175,7 +223,8 @@ nav {
   .portfolio h1 {
     font-size: 10em;
     font-weight: lighter;
-    color: #5b3921; }
+    color: #5b3921;
+    opacity: 0; }
 
 .portfolio-content {
   max-width: 120em;
@@ -188,19 +237,64 @@ nav {
   vertical-align: top;
   margin: 0 3% 0 0;
   text-align: left;
-  width: 30%; }
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  opacity: 0; }
   .portfolio-example .portfolio-desc-title {
     font-weight: bold;
-    color: #5b3921; }
-  .portfolio-example p {
-    font-size: 1.4em; }
+    color: #FF9200; }
+  .portfolio-example .portfolio-info {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.7;
+    text-align: left; }
+    .portfolio-example .portfolio-info h3,
+    .portfolio-example .portfolio-info p {
+      padding: 10px 0 0 15px; }
+    .portfolio-example .portfolio-info p {
+      font-size: 1.4em;
+      color: #fff; }
+    .portfolio-example .portfolio-info hr {
+      padding: 0 5px 0 0;
+      width: 90%; }
   .portfolio-example img {
     width: 100%;
-    height: 90%;
     box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
     -moz-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
-    -webkit-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33);
-    margin-bottom: 2em; }
+    -webkit-box-shadow: 8px 12px 13px rgba(0, 0, 0, 0.33); }
+
+.resume-mod {
+  opacity: 0; }
+
+.fade-in {
+  animation: fade-in 1.5s ease forwards; }
+
+@keyframes fade-in {
+  to {
+    opacity: 1; } }
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 1.5s ease forwards; }
+
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
+#info-01,
+#info-02,
+#info-03 {
+  bottom: -500px;
+  left: 0;
+  transition: bottom 0.5s; }
+
+.portfolio-example:hover #info-01,
+.portfolio-example:hover #info-02,
+.portfolio-example:hover #info-03 {
+  bottom: 0; }
 
 @media screen and (max-width: 812px) {
   .portfolio h1 {
@@ -212,7 +306,13 @@ nav {
     width: auto; }
     .portfolio-example img {
       max-width: 100%;
-      width: 100%; } }
+      width: 100%; }
+
+  #info-01,
+  #info-02,
+  #info-03 {
+    bottom: -50%;
+    left: 0; } }
 .resume {
   background-color: #9EA8A7;
   background: -webkit-linear-gradient(#9EA8A7, #fff);
@@ -273,13 +373,12 @@ nav {
         margin: 0; }
     .resume .resume-content .skills {
       vertical-align: top;
-      text-align: center;
       margin: 3em auto 0 2%;
       text-align: left; }
       .resume .resume-content .skills h2 {
         text-align: left;
         margin-left: 0; }
-    .resume .resume-content .languages, .resume .resume-content .software {
+    .resume .resume-content .languages, .resume .resume-content .software, .resume .resume-content .education {
       margin-right: 50px;
       text-align: left;
       vertical-align: top; }
@@ -288,7 +387,7 @@ nav {
       width: 70%;
       margin: 0 auto; }
     .resume .resume-content .education {
-      margin: 3em auto 0 2%; }
+      margin: 0 auto 0 2%; }
       .resume .resume-content .education p {
         margin: 0; }
 
@@ -298,18 +397,28 @@ nav {
     .resume h1 {
       font-size: 5em; }
     .resume h2 {
-      text-align: center; }
+      text-align: left;
+      margin: 0; }
+    .resume p {
+      text-align: left; }
     .resume .resume-content {
       margin: 0 3% 40px 3%;
-      text-align: center; }
+      text-align: left; }
       .resume .resume-content .resume-profile {
         width: 90%;
         margin: 0 3%; }
+        .resume .resume-content .resume-profile h2 {
+          margin: 0; }
       .resume .resume-content .resume-post {
         display: block;
-        text-align: center;
         width: 95%;
-        margin: 0 auto; } }
+        margin: 0 auto; }
+      .resume .resume-content .education {
+        text-align: left; }
+      .resume .resume-content .education p {
+        text-align: left; }
+      .resume .resume-content .education h3 {
+        margin: 0; } }
 footer {
   background-color: #363636;
   border-top: 10px solid #5b3921;
