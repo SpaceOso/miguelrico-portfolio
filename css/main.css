@@ -50,6 +50,9 @@ html{
     /*display: flex;*/
     /*justify-content: center;*/
     line-height: 10.2rem;
+    text-align: center;
+    width: 50%;
+    margin:auto;
 }
 .main-header{
     font-size: 14.4rem;
@@ -60,6 +63,7 @@ html{
     font-size: 7.2rem;
     margin: 0;
     color: #F0DB4F;
+    text-align: right;
 }
 
 /*===========================================
@@ -68,9 +72,29 @@ html{
 .technologies-container{
     display: flex;
     justify-content: center;
+    margin-top: 60px;
 }
 
 .technologies-container img{
     max-height: 120px;
     margin-right: 26px;
+}
+
+/*===========================================
+    MEDIA QUERIES
+===========================================*/
+@media (max-width: 1344px) {
+    .header-container{
+        line-height: 7.2rem;
+    }
+    .main-header{
+        font-size: 10.4rem;
+    }
+    .sub-header{
+        font-size: 4.2rem;
+    }
+    .technologies-container img{
+        margin-right: 10px;
+        max-height: 100px;
+    }
 }
