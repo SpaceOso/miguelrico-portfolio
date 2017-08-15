@@ -1,0 +1,76 @@
+html{
+    /*To prevent the gradient from repeating past the visible section of the viewport (assuming there was a scrollbar), replace height: 100%; with min-height: 100%;.*/
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    /** Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#010f33+0,07406c+100 *!*/
+    background: #010f33; /* Old browsers */
+    background: -moz-linear-gradient(top, #010f33 0%, #07406c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #010f33 0%,#07406c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #010f33 0%,#07406c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010f33', endColorstr='#07406c',GradientType=0 ); /* IE6-9 */
+    color: #FFFFFF;
+    font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+    /*font-family: 'Orbitron', sans-serif;*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/*===========================================
+    HELPERS
+===========================================*/
+.orbitron{
+    font-family: 'Orbitron', sans-serif;
+    color: #FFFFFF;
+    font-weight: 400;
+
+}
+
+/*===========================================
+    NAV
+===========================================*/
+.social-media-nav{
+    text-align: right;
+    height: 70px;
+    padding: 30px;
+}
+.social-media-nav img{
+    max-height: 40px;
+    max-width: 40px;
+}
+/*===========================================
+    HEADER
+===========================================*/
+.header-container{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    line-height: 10.2rem;
+}
+.main-header{
+    font-size: 14.4rem;
+    margin: 0;
+}
+
+.sub-header{
+    font-size: 7.2rem;
+    margin: 0;
+    color: #F0DB4F;
+}
+
+/*===========================================
+    TECHNOLOGIES
+===========================================*/
+.technologies-container{
+    display: flex;
+    justify-content: center;
+}
+
+.technologies-container img{
+    max-height: 120px;
+    margin-right: 26px;
+}
