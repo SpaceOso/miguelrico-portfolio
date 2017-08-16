@@ -25,6 +25,10 @@ html{
 /*===========================================
     HELPERS
 ===========================================*/
+a{
+    color: inherit;
+    text-decoration: none;
+}
 .orbitron{
     font-family: 'Orbitron', sans-serif;
     color: #FFFFFF;
@@ -32,17 +36,28 @@ html{
 
 }
 
+.sections{
+    font-size: 1.8rem;
+    line-height: 25px;
+    width: 80%;
+    margin: 20px auto;
+    /*font-family: 'Poppins', sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Source Sans Pro', sans-serif;
+}
 /*===========================================
     NAV
 ===========================================*/
 .social-media-nav{
+    position: static;
     text-align: right;
     height: 70px;
     padding: 30px;
 }
 .social-media-nav img{
-    max-height: 40px;
-    max-width: 40px;
+    /*max-height: 60px;*/
+    max-width: 60px;
 }
 /*===========================================
     HEADER
@@ -82,7 +97,8 @@ html{
 .technologies-container img{
     max-height: 250px;
     margin-right: 26px;
-    height: 100%;
+    /*height: 100%;*/
+    max-width: 122px;
 }
 
 /*===========================================
@@ -94,7 +110,9 @@ html{
     width: 80%;
     margin: 20px auto;
     /*font-family: 'Poppins', sans-serif;*/
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .resume p{
@@ -102,7 +120,7 @@ html{
 }
 
 .resume h2{
-    color: #F0DB4F;
+    /*color: #F0DB4F;*/
 
 }
 
@@ -123,6 +141,11 @@ html{
     MEDIA QUERIES
 ===========================================*/
 @media (max-width: 1344px) {
+    .social-media-nav img{
+        /*max-height: 60px;*/
+        max-width: 40px;
+    }
+
     .header-container{
         line-height: 7.2rem;
     }
@@ -156,12 +179,49 @@ html{
     }
 }
 
-@media(max-width: 777px){
+@media(max-width: 784px){
     .header-container{
         line-height: 4.2rem;
     }
     .main-header{
         font-size: 5.4rem;
+    }
+    .sub-header{
+        font-size: 2.2rem;
+    }
+}
+
+@media(max-width: 764px){
+    .header-container{
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-header{
+        display: inline-block;
+    }
+    .sub-header{
+        display: inline-block;
+    }
+}
+
+@media(max-width: 640px){
+    .social-media-nav{
+        height: auto;
+        text-align: center;
+    }
+
+    .social-media-nav img{
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 504px){
+    .header-container{
+        line-height: 2.5rem;
+    }
+    .main-header{
+        font-size: 3.4rem;
     }
     .sub-header{
         font-size: 2.2rem;
