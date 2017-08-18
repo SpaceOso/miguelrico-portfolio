@@ -100,7 +100,35 @@ a{
     /*height: 100%;*/
     max-width: 122px;
 }
+/*===========================================
+    PORTFOLIO
+===========================================*/
+.portfolio-section{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.09);
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
+.portfolio-section .tools img{
+    display: inline-block;
+    max-width: 60px;
+}
+
+.portfolio-section img{
+    max-height: 200px;
+}
+.portfolio-section h1{
+    font-size: 3rem;
+}
+
+.portfolio-section p{
+    font-size: 1.8rem;
+}
 /*===========================================
     RESUME
 ===========================================*/
@@ -136,7 +164,21 @@ a{
     display: inline-block;
     margin-right: 5px;
 }
-
+/*===========================================
+    MSS-SITE
+===========================================*/
+.mss-site{
+    font-size: 1.8rem;
+    width: 80%;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+.mss-module img,
+.mss-module video{
+    max-width: 100%;
+    width: auto;
+}
 /*===========================================
     MEDIA QUERIES
 ===========================================*/
@@ -176,6 +218,13 @@ a{
     .technologies-container img{
         max-height: 80px;
         margin-right: 5px;
+    }
+}
+@media(max-width: 850px){
+    .portfolio-section{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -225,5 +274,19 @@ a{
     }
     .sub-header{
         font-size: 2.2rem;
+    }
+}
+
+@media(max-width: 675px){
+    .portfolio-section{
+        width: 100%;
+    }
+}
+
+@media(max-width: 450px){
+    @media(max-width: 850px){
+        .portfolio-section img{
+            max-width: 280px;
+        }
     }
 }
